@@ -1,5 +1,5 @@
 # Start from the official Golang base image
-FROM golang
+FROM public.ecr.aws/docker/library/golang
 
 # Set the working directory inside the container
 WORKDIR /app
