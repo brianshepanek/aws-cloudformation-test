@@ -11,6 +11,7 @@ func main() {
 	http.HandleFunc("/foo", fooHandler)
 	http.HandleFunc("/bar", barHandler)
 	http.HandleFunc("/fizz", fizzHandler)
+	http.HandleFunc("/fuzz", fuzzHandler)
 	fmt.Println("Server is listening on port 8080...")
 	http.ListenAndServe(":80", nil)
 }
@@ -29,4 +30,8 @@ func barHandler(w http.ResponseWriter, r *http.Request) {
 
 func fizzHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello, Fizz @ "+time.Now().String())
+}
+
+func fuzzHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello, Fuzz @ "+time.Now().String())
 }
