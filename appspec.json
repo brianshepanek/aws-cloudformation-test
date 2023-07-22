@@ -1,0 +1,17 @@
+{
+    "version": 0.0,
+    "Resources": [
+      {
+        "TargetService": {
+          "Type": "AWS::ECS::Service",
+          "Properties": {
+            "TaskDefinition": "arn:aws:ecs:us-east-2:324364904791:task-definition/bri-co-test-project-task:16",
+            "LoadBalancerInfo": {
+              "ContainerName": "bri-co-test-project-container",
+              "ContainerPort": 80
+            }
+          }
+        }
+      }
+    ]
+  }
