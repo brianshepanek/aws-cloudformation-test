@@ -13,8 +13,8 @@ func main() {
 	http.HandleFunc("/bar", barHandler)
 	http.HandleFunc("/fizz", fizzHandler)
 	http.HandleFunc("/fuzz", fuzzHandler)
-	http.HandleFunc("/rand", fuzzHandler)
-	fmt.Println("Server is listening on port 8080...")
+	http.HandleFunc("/rand", randHandler)
+	fmt.Println("Server is listening on port 80...")
 	http.ListenAndServe(":80", nil)
 }
 
